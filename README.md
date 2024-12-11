@@ -4,17 +4,29 @@ This repository contains automated test scripts written using Cypress for end-to
 ## Folder Structure
 
 cypress-automation/
+
 ├── cypress/
+
 │   ├── fixtures/        # Holds static files like JSON used in api tests (json for API tests)
+
 │   ├── e2e/             # Test cases for end-to-end and functional testing (API Spec file, Multicalendar Specs, Manage listing specs)
+
 │   ├── support/         # Custom commands and setup files (e2e.js file to handle exceptions, utilities.js for reusable functions)
+
 │   ├── screenshots/     # Captured screenshots for failing tests
+
 │   └── reports/         # Test reports (generated after running tests)
+
 ├── node_modules/        # Project dependencies
+
 ├── cypress.config.js    # Cypress configuration file (Base url, reports configurations)
+
 ├── cypress.env.json     # Cypress configuration file (Username and Password stored here)
+
 ├── package.json         # Project metadata and dependencies
+
 ├── README.md            # This file
+
 └── .gitignore           # Git ignore file
 
 ## Prerequisites
@@ -117,34 +129,6 @@ Custom commands and helpers can be added in the cypress/support directory. This 
 
 ## Screenshots and Videos
 By default, Cypress captures screenshots for failed tests and saves them in the cypress/screenshots folder. Additionally, Cypress can capture videos of the entire test run, stored in the cypress/videos folder.
-
-## Continuous Integration (Optional)
-If you use CI tools like GitHub Actions or Jenkins, you can configure Cypress to run tests automatically on every push or pull request.
-
-## Example of GitHub Actions Workflow
-In .github/workflows/cypress.yml, you can configure automated testing on push events.
-
-name: Cypress Tests
-on:
-  push:
-    branches:
-      - main
-jobs:
-  cypress-run:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-      - name: Install dependencies
-        run: npm install
-      - name: Run Cypress tests
-        run: npx cypress run
-      - name: Generate Mochawesome report
-        run: npm run posttest
 
 ## Fork the repository.
 Create a new branch (git checkout -b feature-branch).
