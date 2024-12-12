@@ -4,11 +4,11 @@ describe('Multi Calendar Row/column update', () => {
     const clickRowColumn = (index) => {
         cy.get('[id^="menu-button-"]').eq(index).should('have.text','Row/Column').click();
     };
-    it('Validate row/column update based on selection', () => {
+    it('MultiCalendar_TC_002 - Validate row/column update based on selection', () => {
         //Login
         login();
 
-        //Navigate to Multi Calendar page
+        //Naivigate to Multicalendar 
         multicalendar();
 
         //Add Min Price 

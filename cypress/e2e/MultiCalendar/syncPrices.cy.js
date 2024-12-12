@@ -1,16 +1,15 @@
-import { login } from '../support/login';
-import { multicalendar } from '../support/multiCalendar';
-    
+import { login, multicalendar } from '../../support/utilities';
+
 describe('Multi Calendar Sync now feature', () => {
-    it('Validate sync now alert message when toggle is turned on and turned off', () => {
+    it('MultiCalendar_TC_001 - Validate sync now alert message when toggle is turned on and turned off', () => {
         //Login
         login();
 
-        //Navigate to Multi Calendar page
+        //Naivigate to Multicalendar 
         multicalendar();
 
         // Type into the search field and press enter
-        cy.get('input[qa-id="mc-search-listings-input"]').type('aaaaa').type('{enter}')
+        cy.get('input[qa-id="mc-search-listings-input"]').type('224A').type('{enter}')
         cy.wait(2000);
 
         cy.get('#mc-main span span').should('be.visible').click(); 

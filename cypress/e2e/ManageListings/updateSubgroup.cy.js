@@ -1,10 +1,7 @@
 import { login, manageListings } from '../../support/utilities';
     
 describe('Multi Calendar Row/column update', () => {
-    // const clickRowColumn = (index) => {
-    //     cy.get('[id^="menu-button-"]').eq(index).should('have.text','Row/Column').click();
-    // };
-    it('Validate row/column update based on selection', () => {
+    it('ManageListings_TC_003 - Validate row/column update based on selection', () => {
         //Login
         login();
 

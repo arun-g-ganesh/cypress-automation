@@ -4,20 +4,18 @@ describe('Multi Calendar Add Metrics feature', () => {
     const clickAddMetrics = (field) => {
         cy.contains('[id^="popover-trigger-"]', field).click();
     };
-    // const toggleTagsCheckbox = () => cy.get('label[qa-id="mc-tags-checkbox"]').click();
-    it('Validate adding metric and removing the metric', () => {
+    it('MultiCalendar_TC_005 - Validate adding metric and removing the metric', () => {
         //Login
         login();
 
-        //Navigate to Multi Calendar page
+        //Naivigate to Multicalendar 
         multicalendar();
 
         //Click Add Metrics
         clickAddMetrics("Add Metric");
         cy.get('#mc-select-metric-box-0').should('be.visible').click();
 
-        // cy.get('#add-metrics-add-btn').should('be.visible').click();
-        // cy.contains('[id^="popover-trigger-"]', 'Total Revenue').invoke('css', 'display', 'block');
+        //Add Metric
         cy.contains('[id^="popover-trigger-"]', 'Total Revenue').trigger('mouseover');
         cy.get('#select-metric-dfd-revenue--90--1').click();
         cy.get('#mc-select-metric-box-3').should('be.visible').should('have.text', 'Total Revenue Past 90 Days');   

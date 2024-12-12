@@ -5,13 +5,13 @@ describe('Multi Calendar tag feature', () => {
         cy.contains('[id^="menu-button-"]', 'Row/Column').click();
     };
     const toggleTagsCheckbox = () => cy.get('label[qa-id="mc-tags-checkbox"]').click();
-    it('Validate adding tag and removing the tag', () => {
+    it('MultiCalendar_TC_004 - Validate adding tag and removing the tag', () => {
         //Login
         login();
 
-        //Navigate to Multi Calendar page
+        //Naivigate to Multicalendar 
         multicalendar();
-
+        
         //Add Tags to the view
         clickRowColumn(6);
         toggleTagsCheckbox();

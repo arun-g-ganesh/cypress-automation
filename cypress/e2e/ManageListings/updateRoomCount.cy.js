@@ -4,7 +4,7 @@ describe('Multi Calendar Row/column update', () => {
     // const clickRowColumn = (index) => {
     //     cy.get('[id^="menu-button-"]').eq(index).should('have.text','Row/Column').click();
     // };
-    it('Validate row/column update based on selection', () => {
+    it('ManageListings_TC_002 - Update room count for a listing that has no assigned group', () => {
         //Login
         login();
 

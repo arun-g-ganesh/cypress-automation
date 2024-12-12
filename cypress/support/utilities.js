@@ -9,7 +9,7 @@ export const login = () => {
         cy.log(cookie);
         cy.writeFile('cypress/fixtures/cookie.json', { cookieValue: cookie.value });
     });
-    cy.url().should('include', '/multicalendar');
+    cy.url().should('include', '/pricing');
 };
 
 export const multicalendar = () => {
@@ -17,7 +17,6 @@ export const multicalendar = () => {
     cy.get('a[qa-id="nav-item-title"]').click();
     cy.get('h4[qa-id="dropdown-value-mcp-v2"]').click();
     cy.url().should('include', '/multicalendar');
-    cy.get('button[qa-id="mc-default-landing-page-no-button"]').should('be.visible').click();
 
 };
 

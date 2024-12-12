@@ -4,11 +4,11 @@ describe('Multi Calendar Listing Filter', () => {
     const clickListingFilter = () => {
         cy.get('#mc-filters-btn').should('have.text', 'Listing Filter').click();
     };
-    it('Validate Listing filter option', () => {
+    it('MultiCalendar_TC_003 - Validate Listing filter option', () => {
         //Login
         login();
 
-        //Navigate to Multi Calendar page
+        //Naivigate to Multicalendar 
         multicalendar();
 
         //Apply Total Occupancy past 60 days filter

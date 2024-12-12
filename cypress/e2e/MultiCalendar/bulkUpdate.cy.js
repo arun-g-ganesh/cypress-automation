@@ -1,11 +1,11 @@
 import { login, multicalendar } from '../../support/utilities';
     
 describe('Multi Calendar bulk update', () => {
-    it('Validate error message while trying to do bulk update on listings that needs save & refresh action', () => {
+    it('MultiCalendar_TC_006 - Validate error message while trying to do bulk update on listings that needs save & refresh action', () => {
         //Login
         login();
 
-        //Navigate to Multi Calendar page
+        //Naivigate to Multicalendar 
         multicalendar();
 
         //Click multiple listings

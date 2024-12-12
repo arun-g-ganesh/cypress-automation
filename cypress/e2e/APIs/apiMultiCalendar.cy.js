@@ -1,7 +1,7 @@
 import { login, getCurrentDateParameter } from '../../support/utilities';
     
 describe('API tests in Multi Calendar Page', () => {
-    it('Validate Search listings API', () => {
+    it('API_TC_001 - Validate Search listings API', () => {
         //Login
         login();
         let currentDate = getCurrentDateParameter();
@@ -21,10 +21,7 @@ describe('API tests in Multi Calendar Page', () => {
             }) 
         });
     });
-    it('Validate Sync now request and response', () => {
-        //Login
-        // login();
-        let currentDate = getCurrentDateParameter();
+    it('API_TC_002 - Validate Sync now request and response', () => {
         cy.fixture('cookie.json').then((cookie) => {
             cy.setCookie('_p_session', cookie.cookieValue);
             cy.fixture('syncNow').then((syncNow) => {
@@ -41,9 +38,7 @@ describe('API tests in Multi Calendar Page', () => {
             }) 
         });
     });
-    it('Validate fetching bulk listings', () => {
-        //Login
-        // login();
+    it('API_TC_003 - Validate fetching bulk listings', () => {
         cy.fixture('cookie.json').then((cookie) => {
             cy.setCookie('_p_session', cookie.cookieValue);
             cy.fixture('bulkNotes').then((bulkNotes) => {
